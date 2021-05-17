@@ -13,7 +13,7 @@ const Nav = () => {
                 <a
                     target="_blank"
                     className="nav-aam-link"
-                    href="https://github.com/chirantan-basu01"
+                    href="https://github.com/chirantan-basu01/FlashType"
                     rel="noreferrer"
                 >
                     Github
