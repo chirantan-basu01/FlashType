@@ -1,6 +1,7 @@
 import React from 'react';
 import './TypingChallengeContainer.css';
 import ChallengeDetailsCard from '../ChallengeDetailsCard/ChallengeDetailsCard';
+import TypingChallenge from '../TypingChallenge/TypingChallenge';
 
 const TypingChallengeContainer = ({ words, characters, wpm }) => {
     return (
@@ -19,7 +20,7 @@ const TypingChallengeContainer = ({ words, characters, wpm }) => {
             </div>
             {/* the real challenge */}
             <div className="typewriter-container">
-                <p>This is the real challenge!</p>
+                <TypingChallenge selectedParagraph="hello world!!" />
             </div>
         </div>
     );
