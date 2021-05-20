@@ -6,6 +6,7 @@ import './App.css';
 import ChallengeSection from '../ChallengeSection/ChallengeSection';
 
 const TotalTime = 60;
+const ServiceUrl = 'http://metaphorpsum.com/paragraphs/1/9';
 
 class App extends React.Component {
     state = {
@@ -15,7 +16,24 @@ class App extends React.Component {
         words: 0,
         characters: 0,
         wpm: 0,
+        testInfo: [],
     };
+
+    componentDidMount() {
+        // fetch(ServiceUrl)
+        //     .then((response) => response.text())
+        //     .then((data) => {
+        //         this.setState({ selectedParagraph: data });
+        //     });
+        const selectedParagraphArray = this.state.selectedParagraph.split('');
+        const testInfo = selectedParagraphArray.map((selectedLetter) => {
+            return {
+                testLetter: selectedLetter,
+                status: 'notAttempted',
+            };
+        });
+        this.setState({ testInfo });
+    }
 
     render() {
         return (
@@ -34,6 +52,7 @@ class App extends React.Component {
                     wpm={this.state.wpm}
                     timeRemaining={this.state.timeRemaining}
                     timerStarted={this.state.timerStarted}
+                    testInfo={this.state.testInfo}
                 />
 
                 {/* Footer */}

@@ -5,6 +5,7 @@ const TypingChallenge = ({
     selectedParagraph,
     timeRemaining,
     timerStarted,
+    testInfo,
 }) => {
     return (
         <div className="typing-challenge">

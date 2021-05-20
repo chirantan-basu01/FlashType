@@ -5,12 +5,12 @@ const Footer = () => {
     return (
         <div className="footer-container">
             <a
-                href="https://www.linkedin.com/in/chirantan-basu-9847b8183/"
+                href="https://chirantanbasu.netlify.app/"
                 className="footer-link"
                 target="_blank"
                 rel="noreferrer"
             >
-                Connect with me at LinkedIn
+                Check out my website
             </a>
         </div>
     );
