@@ -19,6 +19,10 @@ class App extends React.Component {
         testInfo: [],
     };
 
+    handleUserInput = (inputValue) => {
+        console.log(inputValue);
+    };
+
     componentDidMount() {
         // fetch(ServiceUrl)
         //     .then((response) => response.text())
@@ -53,6 +57,7 @@ class App extends React.Component {
                     timeRemaining={this.state.timeRemaining}
                     timerStarted={this.state.timerStarted}
                     testInfo={this.state.testInfo}
+                    onInputChange={this.handleUserInput}
                 />
 
                 {/* Footer */}
